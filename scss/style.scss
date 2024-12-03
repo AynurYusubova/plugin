@@ -1,0 +1,94 @@
+$color_1: #fff;
+$font-family_1: "Poppins", Arial, sans-serif;
+$background-color_1: #1e1e2f;
+
+body {
+	margin: 0;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: $background-color_1;
+	color: $color_1;
+	font-family: $font-family_1;
+}
+canvas {
+	display: block;
+	background: linear-gradient(to bottom, #4a90e2, #1e1e2f);
+}
+.controls {
+	position: fixed;
+	top: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 10;
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	background: rgba(30, 30, 30, 0.8);
+	padding: 10px 20px;
+	border-radius: 10px;
+}
+.slider-group {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	label {
+		color: $color_1;
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+		font-size: 1rem;
+		margin-bottom: 5px;
+		font-family: $font-family_1;
+		font-weight: 500;
+	}
+}
+.temperature-display {
+	font-size: 1.2em;
+	padding: 10px;
+	background: rgba(30, 30, 30, 0.8);
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	text-align: center;
+	color: $color_1;
+	font-family: $font-family_1;
+	font-weight: 500;
+}
+.weather-icon {
+	font-size: 2em;
+	transition: opacity 0.5s ease-in-out;
+}
+.weather-icon.hidden {
+	opacity: 0;
+}
+.additional-info {
+	font-size: 1em;
+	margin-top: 5px;
+	font-family: $font-family_1;
+	font-weight: 500;
+}
+input[type="range"] {
+	appearance: none;
+	width: 100px;
+	height: 6px;
+	background: #ddd;
+	border-radius: 5px;
+	outline: none;
+	transition: background 0.3s ease;
+	&::-webkit-slider-thumb {
+		appearance: none;
+		width: 20px;
+		height: 20px;
+		background: #4a90e2;
+		border: 2px solid #fff;
+		border-radius: 50%;
+		cursor: pointer;
+		transition: transform 0.2s ease;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+}
+

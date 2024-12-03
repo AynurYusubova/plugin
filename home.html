@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="scss/bootstrap.css">
+    <link rel="stylesheet" href="scss/style.css">
+</head>
+<body>
+    <div class="controls">
+		<div class="slider-group">
+			<label for="temperature">Temperature (°C)</label>
+			<input type="range" id="temperature" min="-10" max="30" value="0">
+		</div>
+		<div class="slider-group">
+			<label for="precipitation">Precipitation Intensity</label>
+			<input type="range" id="precipitation" min="0" max="100" value="50">
+		</div>
+		<div class="slider-group">
+			<label for="wind">Wind Speed</label>
+			<input type="range" id="wind" min="-5" max="5" value="0">
+		</div>
+		<div class="slider-group">
+			<label for="cloudiness">Cloudiness (%)</label>
+			<input type="range" id="cloudiness" min="0" max="100" value="50">
+			<span id="cloudinessValue">50%</span>
+		</div>
+
+		<div class="temperature-display">
+			<i class="weather-icon fas fa-cloud-showers-heavy" id="weatherIcon"></i>
+			<span id="temperatureDisplay">Temperature: 0°C / 32°F</span>
+			<span id="precipitationInfo" class="additional-info">Precipitation: 50%</span>
+			<span id="windInfo" class="additional-info">Wind: 0 m/s (Calm)</span>
+		</div>
+	</div>
+	<canvas id="weatherCanvas"></canvas>
+
+    
+
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
